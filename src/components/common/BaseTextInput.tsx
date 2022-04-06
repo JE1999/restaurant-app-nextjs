@@ -57,7 +57,7 @@ const BaseTextInput: FC<TextInputProps> = (props) => {
       <InputLabel htmlFor={name}>{label}</InputLabel>
       {isFormik ? (
         <Field name={name}>
-          {({ field, meta }) => (
+          {({ field, meta }: any) => (
             <>
               <StyledTextInput {...field} {...rest} error={Boolean(meta.error && meta.touched)} />
               {meta.error && meta.touched && <InvalidText>* {meta.error}</InvalidText>}
